@@ -11,9 +11,9 @@ import { LoadUsersWithResolverComponent } from './load-users-with-resolver/load-
 import { UserResolver } from './load-users-with-resolver/user-resolver.ts';
 
 const approutes: Routes = [
-  { path: '', component: AppComponent },
   { path: 'userswithoutresolver', component: LoadUsersWithoutResolverComponent },
-  { path: 'userswithresolver', component: LoadUsersWithResolverComponent, resolve: { users: UserResolver } }
+  { path: 'userswithresolver', component: LoadUsersWithResolverComponent, resolve: { users: UserResolver } },
+  { path: '', component: LoadUsersWithoutResolverComponent }
 ]
 
 @NgModule({
